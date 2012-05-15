@@ -1,0 +1,10 @@
+<h1>List of Users</h1>
+
+<%= link_to "Add a User", "http://localhost:3000/users/new" %>
+
+<ul>
+<% @users.each do |x| %>
+	<li><a href = "http://localhost:3000/users/<%= x.id %>"><%= x.name %></a>
+	<%= x.email %></li>
+<% end %>
+</ul>
